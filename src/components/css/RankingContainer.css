@@ -1,0 +1,39 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.table {
+    display: table;         
+    width: auto;         
+    background-color: #eee;         
+    border: 1px solid #666666;         
+    border-spacing: 5px;
+}
+
+.tableHeader {
+    display: table-header-group;
+    background-color: gray;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.headerCell {
+    display: table-cell;
+    padding: 10px;
+    text-align: justify;
+    border-bottom: 1px solid black;
+}
+
+.tableBody {
+    display: table-row-group;
+    font-size: 20px;
+}
+
+.tableRow {
+    display: table-row;
+}
+
+.rowCell {
+    display: table-cell; 
+}

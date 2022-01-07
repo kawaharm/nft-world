@@ -1,4 +1,4 @@
-import "./Signup.css";
+import "./css/Signup.css";
 
 import React, { Component } from "react";
 import axios from "axios";

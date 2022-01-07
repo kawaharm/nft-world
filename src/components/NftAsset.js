@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './NftPage.css';
+import './css/NftPage.css';
 
 
 class NftAsset extends Component {

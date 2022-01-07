@@ -10,12 +10,11 @@ import './App.css';
 // Components
 import Signup from './components/Signup';
 import Login from './components/Login';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import Homepage from './components/Homepage';
 import NftContainer from './components/NftContainer';
 import NftPage from './components/NftPage';
 import RankingContainer from './components/rankings/RankingContainer';
-import OpenSeaRanking from './components/rankings/OpenSeaRanking';
 
 
 // Protected route for user when logged in  
@@ -63,8 +62,10 @@ function App() {
 
   return (
     <div className="App">
+
       <Router>
         <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
+
         <Routes>
           <Route path='/signup' element={<Signup />} />
           <Route

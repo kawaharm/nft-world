@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './NftContainer.css';
+import './css/NftContainer.css';
 
 // Component
 import { Collections } from './Collections';
