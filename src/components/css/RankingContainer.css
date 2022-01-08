@@ -37,3 +37,8 @@
 .rowCell {
     display: table-cell; 
 }
+
+.collectionImage {
+    height: 5%;
+    width: auto;
+}
