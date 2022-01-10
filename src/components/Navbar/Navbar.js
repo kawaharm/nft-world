@@ -6,7 +6,7 @@ import {
     NavMenu,
     NavBtn,
     NavBtnLink,
-} from './NavbarElements';
+} from './NavbarStyle';
 
 const Navbar = (props) => {
     return (
@@ -15,35 +15,24 @@ const Navbar = (props) => {
                 <Bars />
 
                 <NavMenu>
-                    <NavLink to='/about' activeStyle>
-                        About
+                    <NavLink to='/' activeStyle>
+                        Home
                     </NavLink>
-                    <NavLink to='/events' activeStyle>
-                        Events
+                    <NavLink to='/markets' activeStyle>
+                        Markets
                     </NavLink>
-                    <NavLink to='/annual' activeStyle>
-                        Annual Report
+                    <NavLink to='/rankings' activeStyle>
+                        Rankings
                     </NavLink>
                     <NavLink to='/team' activeStyle>
-                        Teams
+                        About
                     </NavLink>
-                    <NavLink to='/blogs' activeStyle>
-                        Blogs
-                    </NavLink>
-                    <NavLink to='/signup' activeStyle>
-                        Sign Up
-                    </NavLink>
-                    {/* Second Nav */}
-                    {/* <NavBtnLink to='/login'>Sign In</NavBtnLink> */}
                 </NavMenu>
-                {/* <NavBtn> */}
-                {/* <NavLink to='/login'>Log In</NavLink> */}
-                {/* </NavBtn> */}
                 {
                     props.isAuth
                         ? <div>
                             <NavBtn>
-                                <NavLink className="nav-link" to="/profile">Profile</NavLink>
+                                <NavLink to="/profile">Profile</NavLink>
                             </NavBtn>
                             <NavBtn>
                                 <span onClick={props.handleLogout} className="nav-link logout-link">Logout</span>
@@ -51,7 +40,7 @@ const Navbar = (props) => {
                         </div>
                         : <div>
                             <NavBtn>
-                                <NavBtnLink className="nav-link" to="/signup">Create Account</NavBtnLink>
+                                <NavBtnLink to="/signup">Create Account</NavBtnLink>
                             </NavBtn>
                             <NavBtn>
                                 <NavBtnLink to='/login'>Log In</NavBtnLink>

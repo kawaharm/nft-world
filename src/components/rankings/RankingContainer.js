@@ -10,10 +10,11 @@ const { REACT_APP_SERVER_URL } = process.env;
 
 const CollectionData = ({ key, index, name, slug, description, image_url, floor_price }) => (
     <div className="tableRow">
-        <div className="rowCell">{index}</div>
+        <div className="rowCell">{index + 1}</div>
         <div className="rowCell">{name}</div>
-        <div className="rowCell">{slug}</div>
         <div className="rowCell">{floor_price}</div>
+        <div className="rowCell">{/*seven_day_sales*/}</div>
+        <div className="rowCell">{/*thirty_day_sales*/}</div>
         <div className="rowCell">
             <img className="collectionImage" src={image_url} alt="collection image" />
         </div>
@@ -42,22 +43,6 @@ class RankingContainer extends Component {
             })
     }
 
-    compareBy(key) {
-        return function (a, b) {
-            if (a[key] < b[key]) return -1;
-            if (a[key] > b[key]) return 1;
-            return 0;
-        };
-    }
-
-    sortBy(key) {
-        let arrayCopy = [...this.state.data];
-        arrayCopy.sort(this.compareBy.bind(key));
-        this.setState({ data: arrayCopy });
-    }
-
-
-
     render() {
         const displayCollections = this.state.data.map((c, idx) => <CollectionData
             key={idx}
@@ -71,10 +56,11 @@ class RankingContainer extends Component {
             <div className="table">
                 <div className="tableName">OpenSea Ranking
                     <div className="tableHeader">
-                        <div className="headerCell" onClick={() => this.sortBy.bind('')} >#</div>
-                        <div className="headerCell" onClick={() => this.sortBy.bind('name')} >Name</div>
-                        <div className="headerCell" onClick={() => this.sortBy.bind('title')}>Slug</div>
-                        <div className="headerCell" onClick={() => this.sortBy.bind('priority')}>Floor Price</div>
+                        <div className="headerCell">#</div>
+                        <div className="headerCell">Name</div>
+                        <div className="headerCell">Floor Price</div>
+                        <div className="headerCell">7-Days Sales Volume</div>
+                        <div className="headerCell">30-Days Sales Volume</div>
                     </div>
                     <div className="tableBody">
                         {displayCollections}

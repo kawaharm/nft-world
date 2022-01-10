@@ -65,7 +65,6 @@ function App() {
 
       <Router>
         <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
-
         <Routes>
           <Route path='/signup' element={<Signup />} />
           <Route
