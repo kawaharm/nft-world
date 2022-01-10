@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './NftContainer.css';
+import './css/NftContainer.css';
 
 // Components 
 import NftPage from "./NftPage";

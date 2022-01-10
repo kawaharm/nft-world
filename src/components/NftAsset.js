@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './NftPage.css';
+import './css/NftPage.css';
 
 
 class NftAsset extends Component {
@@ -9,38 +9,38 @@ class NftAsset extends Component {
 
     render() {
         return (
-            <div class="card">
-                <div class="header">
-                    <div class="media">
-                        <div class="media-left">
-                            <figure class="image is-48x48">
+            <div className="card">
+                <div className="header">
+                    <div className="media">
+                        <div className="media-left">
+                            <figure className="image is-48x48">
                                 <img src={this.props.collection_image_url} alt="Placeholder image" />
                             </figure>
                         </div>
-                        <div class="media-content">
-                            <a href={this.props.permalink} class="title is-4">{this.props.name}</a>
+                        <div className="media-content">
+                            <a href={this.props.permalink} className="title is-4">{this.props.name}</a>
                             <br />
-                            <p class="subtitle is-6">Last Sale: {this.props.last_sale} ETH</p>
+                            <p className="subtitle is-6">Last Sale: {this.props.last_sale} ETH</p>
                         </div>
                     </div>
                 </div>
-                <div class="card-image">
-                    <figure class="image is-4by3">
+                <div className="card-image">
+                    <figure className="image is-4by3">
                         <img src={this.props.image_url} alt="Placeholder image" />
                     </figure>
                 </div>
-                <div class="card-content">
-                    <div class="level is-mobile">
-                        <div class="level-left">
-                            <div class="level-item has-text-centered">
+                <div className="card-content">
+                    <div className="level is-mobile">
+                        <div className="level-left">
+                            <div className="level-item has-text-centered">
                                 <a href="">
-                                    <i class="material-icons">favorite_border</i>
+                                    <i className="material-icons">favorite_border</i>
                                 </a>
                             </div>
-                            <div class="level-item has-text-centered">
+                            <div className="level-item has-text-centered">
                                 <div>
                                     <a href="">
-                                        <i class="material-icons">chat_bubble_outline</i>
+                                        <i className="material-icons">chat_bubble_outline</i>
                                     </a>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@ class NftAsset extends Component {
                     </div>
 
 
-                    <div class="content">
+                    <div className="content">
                         <p>
                             <strong>32 Likes</strong>
                         </p>
@@ -56,18 +56,18 @@ class NftAsset extends Component {
                         <br />
                     </div>
                 </div>
-                <div class="card-footer">
-                    <div class="columns is-mobile">
-                        <div class="column is-11">
-                            <div class="field">
-                                <div class="control">
-                                    <input class="input is-medium" type="text" placeholder="Add a comment . . ." />
+                <div className="card-footer">
+                    <div className="columns is-mobile">
+                        <div className="column is-11">
+                            <div className="field">
+                                <div className="control">
+                                    <input className="input is-medium" type="text" placeholder="Add a comment . . ." />
                                 </div>
                             </div>
                         </div>
-                        <div class="column has-text-centered">
-                            <button class="button">
-                                <i class="material-icons">more_horiz</i>
+                        <div className="column has-text-centered">
+                            <button className="button">
+                                <i className="material-icons">more_horiz</i>
                             </button>
                         </div>
                     </div>
