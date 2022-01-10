@@ -15,6 +15,7 @@ import Homepage from './components/Homepage';
 import NftContainer from './components/NftContainer';
 import NftPage from './components/NftPage';
 import RankingContainer from './components/rankings/RankingContainer';
+import MarketContainer from './components/MarketContainer';
 
 
 // Protected route for user when logged in  
@@ -69,7 +70,7 @@ function App() {
           <Route path='/signup' element={<Signup />} />
           <Route
             path="/login"
-            render={(props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser} />}
+            element={<Login nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser} />}
           />
           <Route exact path="/" element={<Homepage />} />
           <Route path="/nft" element={<NftContainer />} />
@@ -78,6 +79,7 @@ function App() {
           <Route path="/nft/mutant-ape-yacht-club" element={<NftPage collection={"mutant-ape-yacht-club"} />} />
           <Route path="/nft/collectvoxmirandus" element={<NftPage collection={"collectvoxmirandus"} />} />
           <Route path="/rankings" element={<RankingContainer />} />
+          <Route path="/markets" element={<MarketContainer />} />
         </Routes>
       </Router>
     </div>

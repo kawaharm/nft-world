@@ -12,12 +12,12 @@ const CollectionData = ({ key, index, name, slug, description, image_url, floor_
     <div className="tableRow">
         <div className="rowCell">{index + 1}</div>
         <div className="rowCell">{name}</div>
-        <div className="rowCell">{floor_price}</div>
-        <div className="rowCell">{/*seven_day_sales*/}</div>
-        <div className="rowCell">{/*thirty_day_sales*/}</div>
         <div className="rowCell">
             <img className="collectionImage" src={image_url} alt="collection image" />
         </div>
+        <div className="rowCell">{floor_price}</div>
+        <div className="rowCell">{/*seven_day_sales*/}</div>
+        <div className="rowCell">{/*thirty_day_sales*/}</div>
     </div>
 );
 
@@ -32,7 +32,7 @@ class RankingContainer extends Component {
 
     // Access Collections from backend API
     componentDidMount() {
-        axios.get(`${REACT_APP_SERVER_URL}/api`)
+        axios.get(`${REACT_APP_SERVER_URL}/collections/test`)
             .then((response) => {
                 console.log('YOU ARE CONNECTED TO BACKEND!!!!');
                 console.log('collection array response:');
@@ -53,17 +53,21 @@ class RankingContainer extends Component {
             image_url={c.image_url}
             floor_price={c.floor_price} />);
         return (
-            <div className="table">
-                <div className="tableName">OpenSea Ranking
-                    <div className="tableHeader">
-                        <div className="headerCell">#</div>
-                        <div className="headerCell">Name</div>
-                        <div className="headerCell">Floor Price</div>
-                        <div className="headerCell">7-Days Sales Volume</div>
-                        <div className="headerCell">30-Days Sales Volume</div>
-                    </div>
-                    <div className="tableBody">
-                        {displayCollections}
+            <div className="RankingContainer">
+                <h2 className="tableName">OpenSea Rankings</h2>
+                <div className="table">
+                    <div className="tableName">
+                        <div className="tableHeader">
+                            <div className="headerCell">#</div>
+                            <div className="headerCell">Name</div>
+                            <div className="headerCell"></div>
+                            <div className="headerCell">Floor Price</div>
+                            <div className="headerCell">7-Days Sales Volume</div>
+                            <div className="headerCell">30-Days Sales Volume</div>
+                        </div>
+                        <div className="tableBody">
+                            {displayCollections}
+                        </div>
                     </div>
                 </div>
             </div>
