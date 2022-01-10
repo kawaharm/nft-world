@@ -8,6 +8,14 @@
     background-color: #eee;         
     border: 1px solid #666666;         
     border-spacing: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.tableName {
+    font-size: 40px;
+    margin: 40px auto 0px auto;
 }
 
 .tableHeader {
@@ -38,8 +46,6 @@
     display: table-cell; 
     border: 2px solid black;
     height: 100px;
-    /* justify-content: center;
-    align-items: center; */
 }
 
 .collectionImage {
