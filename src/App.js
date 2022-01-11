@@ -16,6 +16,8 @@ import NftContainer from './components/NftContainer';
 import NftPage from './components/NftPage';
 import RankingContainer from './components/rankings/RankingContainer';
 import MarketContainer from './components/MarketContainer';
+import Profile from './components/Profile';
+
 
 
 // Protected route for user when logged in  
@@ -80,6 +82,7 @@ function App() {
           <Route path="/nft/collectvoxmirandus" element={<NftPage collection={"collectvoxmirandus"} />} />
           <Route path="/rankings" element={<RankingContainer />} />
           <Route path="/markets" element={<MarketContainer />} />
+          <Route path="/profile" element={<Profile user={currentUser} handleLogout={handleLogout} />} />
         </Routes>
       </Router>
     </div>
