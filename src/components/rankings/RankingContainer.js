@@ -36,7 +36,8 @@ class RankingContainer extends Component {
         this.state = {
             data: Collections,
             apiData: [],
-            like: 0
+            likedCollection: [],
+            updateLikedCollection: []
         };
     }
 
@@ -68,6 +69,7 @@ class RankingContainer extends Component {
             floor_price={c.floor_price}
             seven_day_sales={c.seven_day_sales}
             thirty_day_sales={c.thirty_day_sales}
+            likedCollection={this.state.likedCollection}
         />);
         return (
             <div className="RankingContainer">
@@ -78,7 +80,7 @@ class RankingContainer extends Component {
                             <div className="headerCell">#</div>
                             <div className="headerCell">Name</div>
                             <div className="headerCell"></div>
-                            <div className="headerCell">Floor Price</div>
+                            <div className="headerCell">Floor Price (in ETH)</div>
                             <div className="headerCell">7-Days Sales Volume</div>
                             <div className="headerCell">30-Days Sales Volume</div>
                         </div>
