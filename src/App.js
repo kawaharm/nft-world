@@ -16,6 +16,8 @@ import NftContainer from './components/NftContainer';
 import NftPage from './components/NftPage';
 import RankingContainer from './components/rankings/RankingContainer';
 import MarketContainer from './components/MarketContainer';
+import Profile from './components/Profile';
+
 
 
 // Protected route for user when logged in  
@@ -74,12 +76,14 @@ function App() {
           />
           <Route exact path="/" element={<Homepage />} />
           <Route path="/nft" element={<NftContainer />} />
-          <Route path="/nft/cryptopunks" element={<NftPage collection={"cryptopunks"} />} />
+          {/* <Route path="/nft/cryptopunks" element={<NftPage collection={"cryptopunks"} />} />
           <Route path="/nft/boredapeyachtclub" element={<NftPage collection={"boredapeyachtclub"} />} />
           <Route path="/nft/mutant-ape-yacht-club" element={<NftPage collection={"mutant-ape-yacht-club"} />} />
-          <Route path="/nft/collectvoxmirandus" element={<NftPage collection={"collectvoxmirandus"} />} />
+          <Route path="/nft/collectvoxmirandus" element={<NftPage collection={"collectvoxmirandus"} />} /> */}
           <Route path="/rankings" element={<RankingContainer />} />
           <Route path="/markets" element={<MarketContainer />} />
+          <Route path="/profile" element={<Profile user={currentUser} handleLogout={handleLogout} />} />
+          <Route path="/nft/:id" element={<NftPage />} />
         </Routes>
       </Router>
     </div>
