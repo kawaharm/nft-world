@@ -73,7 +73,7 @@ class RankingContainer extends Component {
         />);
         return (
             <div className="RankingContainer">
-                <h2 className="tableName">OpenSea Rankings</h2>
+                <h2 className="tableName"><span><img className="tableSymbol" src="https://pbs.twimg.com/profile_images/1412527141770731523/-x5TRL-5_400x400.png" />   </span>OpenSea Rankings</h2>
                 <div className="table">
                     <div className="tableName">
                         <div className="tableHeader">
