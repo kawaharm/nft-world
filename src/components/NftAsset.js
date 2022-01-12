@@ -4,7 +4,7 @@ import './css/NftPage.css';
 
 function NftAsset(props) {
     return (
-        <div className="card">
+        <div className="card" style={{ backgroundColor: "#292D38" }}>
             <div className="header">
                 <div className="media">
                     <div className="media-left">
@@ -12,10 +12,11 @@ function NftAsset(props) {
                             <img src={props.collection_image_url} alt="Placeholder image" />
                         </figure>
                     </div>
-                    <div className="media-content">
-                        <a href={props.permalink} className="title is-4">{props.name}</a>
+                    <div style={{ color: "white" }}>
+                        <a href={props.permalink} className="assetName">{props.name}</a>
                         <br />
-                        <p className="subtitle is-6">Last Sale: {props.last_sale} ETH</p>
+                        {/* Convert price to ETH */}
+                        <p className="assetPrice">Last Sale: {props.last_sale * (10 ** -18)} ETH</p>
                     </div>
                 </div>
             </div>
@@ -41,11 +42,13 @@ function NftAsset(props) {
                         </div>
                     </div>
                 </div>
-                <div className="content">
-                    <p>
-                        <strong>32 Likes</strong>
+                <div className="content" style={{ color: "white" }}>
+                    <p className="likeCounter">
+                        <strong></strong>
                     </p>
-                    <strong>TRAITS: </strong>{props.trait_value}
+                    <p className="assetTraits">
+                        <strong style={{ fontSize: 30 }, { color: "#10E5E2" }}>TRAITS: </strong>{props.trait_value}
+                    </p>
                     <br />
                 </div>
             </div>
@@ -65,7 +68,7 @@ function NftAsset(props) {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
