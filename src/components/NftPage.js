@@ -1,29 +1,28 @@
+// Imports
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import './css/NftPage.css';
-
-// Components
 import NftAsset from './NftAsset';
 
 function NftPage(props) {
+    // Hooks
     const { id } = useParams();
     const [assets, setAssets] = useState([]);
 
-    // Will only allow one API call at a time when needed. Or else will keep hitting API many times. 
     useEffect(() => {
-        console.log('THIS IS SLUG ID: ', id);
+        // Call OpenSea API to retrieve assets from NFT collection
+        // Limited to last 20 assets by sales date
         axios.get(`https://api.opensea.io/api/v1/assets?order_by=sale_date&order_direction=desc&offset=0&limit=20&collection=${id}`)
             .then((response) => {
-                console.log('RESPONSE: ', response.data);
                 setAssets(response.data.assets);
-                console.log('THIS IS ASSETS: ', assets);
             })
             .catch((err) => {
                 console.log('ERROR hitting API: ', err);
             })
     }, []); // <-- Empty array in input so would only run on mount
 
+    // Create a new array that stores assets data and send to NftAsset Component 
     const displayAssets = assets.map((a, idx) => {
         return <NftAsset
             key={idx}
@@ -36,7 +35,6 @@ function NftPage(props) {
             trait_value={a.traits.map(t => { return `${t.value}, ` })}
         />
     })
-    console.log('DISPLAY ASSETS: ', displayAssets);
 
     return (
         <div>
