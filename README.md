@@ -12,7 +12,7 @@ NFT World is a full-stack application, with this repository containing the front
 2. Run `npm install` to install node packages
 3. Set up `.env` file to access the server with the following:
     ```
-    REACT_APP_SERVER_URL=
+    REACT_APP_SERVER_URL=http://nft-world-api.herokuapp.com/
     ```
 
 ## Screenshots
@@ -29,6 +29,7 @@ Rankings Page
 
 `RankingContainer.js`
 
+This React method sends an HTTP request to the server to retrieve all the `Collections` documents and store it in the `collections` state array.
 ```js
     // Access Collections Controller to retrieve NFT collections
     componentDidMount() {
@@ -45,6 +46,7 @@ Rankings Page
     }
 ```
 
+To display the attributes of each collection on the Rankings page, a copy of the `collections` array is created, mapped to extract the necessary data, and sent to the OpenSeaRanking component.
 ```js
         // Create a new array that stores collections data and send to OpenSeaRanking Component 
         const displayCollections = this.state.collections.map((c, idx) => <OpenSeaRanking
