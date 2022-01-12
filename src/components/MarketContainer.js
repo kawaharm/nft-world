@@ -10,31 +10,31 @@ class MarketContainer extends Component {
             <div className="marketContainer">
                 <div class="collectionGrid">
                     <div class="collectionList">
-                        <h2>Markets on Ethereum</h2>
+                        <h2 className="collectionHeader">Markets on Ethereum<span>  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/800px-Ethereum-icon-purple.svg.png" /></span></h2>
                         <ul>
                             <li className="collectionItem"><a href="https://opensea.io/">OpenSea</a></li>
-                            <li className="collectionItem">Axie Infinity</li>
-                            <li className="collectionItem">Rarable</li>
-                            <li className="collectionItem">Decentraland</li>
-                            <li className="collectionItem">Super Rare</li>
+                            <li className="collectionItem"><a href="https://marketplace.axieinfinity.com/">Axie Infinity</a></li>
+                            <li className="collectionItem"><a href="https://rarible.com/">Rarible</a></li>
+                            <li className="collectionItem"><a href="https://market.decentraland.org/">Decentraland</a></li>
+                            <li className="collectionItem"><a href="https://superrare.com/">Super Rare</a></li>
                         </ul>
                     </div>
                     <div class="collectionList">
-                        <h2>Markets on Solana</h2>
+                        <h2 className="collectionHeader">Markets on Solana<span>  <img src="https://thumbor.forbes.com/thumbor/trim/0x104:692x565/fit-in/692x461/smart/https://specials-images.forbesimg.com/imageserve/60be57e131b5299078734980/Solana-logo/0x0.jpg" /></span></h2>
                         <ul>
-                            <li className="collectionItem"><a href="https://opensea.io/">Solanart</a></li>
-                            <li className="collectionItem">DigitalEyes</li>
-                            <li className="collectionItem">Magic Eden</li>
-                            <li className="collectionItem">Solsea</li>
-                            <li className="collectionItem">Metaplex</li>
+                            <li className="collectionItem"><a href="https://solanart.io/">Solanart</a></li>
+                            <li className="collectionItem"><a href="https://digitaleyes.market/">DigitalEyes</a></li>
+                            <li className="collectionItem"><a href="https://magiceden.io/">Magic Eden</a></li>
+                            <li className="collectionItem"><a href="https://solsea.io/">Solsea</a></li>
+                            <li className="collectionItem"><a href="https://www.metaplex.com/">Metaplex</a></li>
                         </ul>
                     </div>
                     <div class="collectionList">
-                        <h2>Markets on Cardano</h2>
+                        <h2 className="collectionHeader">Markets on Cardano<span>  <img src="https://pbs.twimg.com/profile_images/1454155381236588544/OVDyxkw3_400x400.jpg" /></span></h2>
                         <ul>
-                            <li className="collectionItem"><a href="https://opensea.io/">CNFT</a></li>
-                            <li className="collectionItem">Tokhun</li>
-                            <li className="collectionItem">Galaxy of Art</li>
+                            <li className="collectionItem"><a href="https://cnft.io/">CNFT</a></li>
+                            <li className="collectionItem"><a href="https://tokhun.io/">Tokhun</a></li>
+                            <li className="collectionItem"><a href="https://www.galaxyof.art/">Galaxy of Art</a></li>
                         </ul>
                     </div>
                 </div>

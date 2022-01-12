@@ -1,21 +1,31 @@
 .collectionGrid {
     display: flex;
     justify-content: space-between;
-    border: 2px solid red;
+    background-color: #eee;         
     font-size: 40px;
-    margin-top: 50px;
+    margin-top: 100px;
   }
   .collectionGrid .collectionList {
     width: 32%;
   }
 
   .collectionList {
-      border: 2px dashed blue;
       margin-left: 40px;
       margin-right: 40px;
   }
 
+  .collectionHeader {
+      background-color: gray;
+      font-weight: bold;
+      padding-top: 10px;
+  }
+
   .collectionItem {
-      border: 3px solid green;
+      border: 3px solid black;
       font-size: 30px;
+      padding: 10px;
+  }
+
+  img {
+    max-height: 60px;
   }

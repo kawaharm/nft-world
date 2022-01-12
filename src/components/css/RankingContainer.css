@@ -61,3 +61,7 @@
 .ethSymbol {
     max-height: 25px;
 }
+
+.tableSymbol {
+    max-height: 50px;
+}
