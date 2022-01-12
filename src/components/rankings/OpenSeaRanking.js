@@ -24,21 +24,10 @@ function OpenSeaRanking(props) {
         }
     };
 
-    // const handleClick = () => {
-    //     axios.post(`${REACT_APP_SERVER_URL}/collections/assets`, props.slug)
-    //         .then((response) => {
-    //             console.log('SLUG RESPONSE', response.data.assetsArray[0].name);
-    //         })
-    //         .catch(err => {
-    //             console.error('ERROR: ', err);
-    //         });
-    // }
-
     return (
         <div className="tableRow">
             <div className="rowCell">{props.index + 1}</div>
             <div className="rowCell">
-                {/* <a onClick={handleClick.bind(this)}>{props.name}</a> */}
                 <Link to={`/nft/${props.slug}`}>{props.name}</Link>
             </div>
             <div className="rowCell">

@@ -1,57 +1,30 @@
 // Components 
-import { Collections } from '../Collections';
-import OpenSeaRanking from './OpenSeaRanking';
-
-// Imports
 import React, { Component } from 'react';
-import '../css/RankingContainer.css'
 import axios from 'axios';
+import OpenSeaRanking from './OpenSeaRanking';
+import '../css/RankingContainer.css'
+
+// Use this key to connect to the server
 const { REACT_APP_SERVER_URL } = process.env;
-
-// const CollectionData = ({ key, index, name, image_url, description, floor_price, seven_day_sales, thirty_day_sales }) => (
-//     <div className="tableRow">
-//         <div className="rowCell">{index + 1}</div>
-//         <div className="rowCell">{name}</div>
-//         <div className="rowCell">
-//             <img className="collectionImage" src={image_url} alt="collection image" />
-//         </div>
-//         <div className="rowCell">{floor_price} ETH</div>
-//         <div className="rowCell">{seven_day_sales} ETH</div>
-//         <div className="rowCell">{thirty_day_sales} ETH</div>
-//         {/* <div className="rowCell">
-//             <i onClick={handleLike.bind(this)} className="material-icons">favorite_border</i>
-//         </div> */}
-//     </div>
-// );
-
-// const handleLike = () => {
-//     this.setState({
-//         likes: this.state.likes + 1
-//     });
-// }
 
 class RankingContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: Collections,
-            apiData: [],
+            collections: [],
             likedCollection: [],
             updateLikedCollection: []
         };
     }
 
-    // Access Collections from backend API
+    // Access Collections Controller to retrieve NFT collections
     componentDidMount() {
-        axios.get(`${REACT_APP_SERVER_URL}/collections/test`)
+        axios.get(`${REACT_APP_SERVER_URL}/collections`)
             .then((response) => {
-                console.log('YOU ARE CONNECTED TO BACKEND!!!!');
-                console.log('collection array response:');
-                console.log(response.data);
+                // Store NFT collections from database
                 this.setState({
-                    apiData: response.data.collections
+                    collections: response.data.collections
                 })
-                console.log('API DATA', this.state.apiData)
             })
             .catch((error) => {
                 console.log('ERROR', error);
@@ -59,7 +32,8 @@ class RankingContainer extends Component {
     }
 
     render() {
-        const displayCollections = this.state.apiData.map((c, idx) => <OpenSeaRanking
+        // Create a new array that stores collections data and send to OpenSeaRanking Component 
+        const displayCollections = this.state.collections.map((c, idx) => <OpenSeaRanking
             key={idx}
             index={idx}
             name={c.name}
