@@ -10,7 +10,7 @@ class MarketContainer extends Component {
             <div className="marketContainer">
                 <div class="collectionGrid">
                     <div class="collectionList">
-                        <h2 className="collectionHeader">Markets on Ethereum<span>  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/800px-Ethereum-icon-purple.svg.png" /></span></h2>
+                        <h2 className="collectionHeader">Markets on Ethereum<span>  <img className="symbol" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/800px-Ethereum-icon-purple.svg.png" /></span></h2>
                         <ul>
                             <li className="collectionItem"><a href="https://opensea.io/">OpenSea</a></li>
                             <li className="collectionItem"><a href="https://marketplace.axieinfinity.com/">Axie Infinity</a></li>
@@ -20,7 +20,7 @@ class MarketContainer extends Component {
                         </ul>
                     </div>
                     <div class="collectionList">
-                        <h2 className="collectionHeader">Markets on Solana<span>  <img src="https://thumbor.forbes.com/thumbor/trim/0x104:692x565/fit-in/692x461/smart/https://specials-images.forbesimg.com/imageserve/60be57e131b5299078734980/Solana-logo/0x0.jpg" /></span></h2>
+                        <h2 className="collectionHeader">Markets on Solana<span>  <img className="symbol" src="https://thumbor.forbes.com/thumbor/trim/0x104:692x565/fit-in/692x461/smart/https://specials-images.forbesimg.com/imageserve/60be57e131b5299078734980/Solana-logo/0x0.jpg" /></span></h2>
                         <ul>
                             <li className="collectionItem"><a href="https://solanart.io/">Solanart</a></li>
                             <li className="collectionItem"><a href="https://digitaleyes.market/">DigitalEyes</a></li>
@@ -30,7 +30,7 @@ class MarketContainer extends Component {
                         </ul>
                     </div>
                     <div class="collectionList">
-                        <h2 className="collectionHeader">Markets on Cardano<span>  <img src="https://pbs.twimg.com/profile_images/1454155381236588544/OVDyxkw3_400x400.jpg" /></span></h2>
+                        <h2 className="collectionHeader">Markets on Cardano<span>  <img className="symbol" src="https://pbs.twimg.com/profile_images/1454155381236588544/OVDyxkw3_400x400.jpg" /></span></h2>
                         <ul>
                             <li className="collectionItem"><a href="https://cnft.io/">CNFT</a></li>
                             <li className="collectionItem"><a href="https://tokhun.io/">Tokhun</a></li>

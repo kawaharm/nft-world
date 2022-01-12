@@ -1,24 +1,4 @@
-.navbar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 2;
-    background-color: white;
-    justify-content: space-around;
-    width: 100%;
-    border-bottom: 1px solid lightgray;
-}
-.navbar-menu {
-    flex-grow: 0.5;
-    justify-content: center;
-}
-.navbar-menu .navbar-item {
-    flex-grow: 1;
-    justify-content: center;
-}
-.navbar-menu .navbar-item .control {
-    width: 50%;
-}
+
 .body-columns {
     margin-top: 10vh;
 }
@@ -48,8 +28,36 @@
     padding: 2rem 1.5rem;
 }
 
-/* @media screen and (max-width: 786px){
-    .navbar {
-        justify-content: space-between;
-    }
-} */
+.assetName {
+    font-size: 40px;
+    font-weight: 1000;
+}
+
+.assetPrice {
+    font-size: 20px;
+    text-align: left;
+}
+
+.likeCounter {
+
+}
+
+.assetTraits {
+    font-size: 20px;
+    text-align: left;
+}
+
+.collectionName {
+    margin-top: 80px;
+    font-family: Impact;
+    font-size: 50px;
+    color: black;
+}
+
+.collectionDesc {
+    margin: 5px;
+    font-family: Helvetica;
+    font-size: 25px;
+    font-weight: 1;
+    padding: 10px 500px;
+}

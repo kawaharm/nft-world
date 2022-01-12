@@ -9,6 +9,7 @@ function NftPage(props) {
     // Hooks
     const { id } = useParams();
     const [assets, setAssets] = useState([]);
+    const [collection, setCollection] = useState({ name: '', description: '' });
 
     useEffect(() => {
         // Call OpenSea API to retrieve assets from NFT collection
@@ -16,6 +17,10 @@ function NftPage(props) {
         axios.get(`https://api.opensea.io/api/v1/assets?order_by=sale_date&order_direction=desc&offset=0&limit=20&collection=${id}`)
             .then((response) => {
                 setAssets(response.data.assets);
+                setCollection({
+                    name: response.data.assets[0].asset_contract.name,
+                    description: response.data.assets[0].asset_contract.description
+                });
             })
             .catch((err) => {
                 console.log('ERROR hitting API: ', err);
@@ -38,8 +43,11 @@ function NftPage(props) {
 
     return (
         <div>
+            <h1 className="collectionName">{collection.name}</h1>
+            <p className="collectionDesc">{collection.description}</p>
+            {/* <h3 className="body-columns">{assets[0].asset_contract.description}</h3> */}
             <div class="columns body-columns">
-                <div class="column is-half is-offset-one-quarter">
+                <div class="column is-half is-offset-one-quarter" style={{ backgroundColor: "#292D38" }}>
                     {/* Add NftAsset Component Here */}
                     {displayAssets}
 
