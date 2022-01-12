@@ -4,7 +4,7 @@ NFT World is a web-based platform to explore NFTs (non-fungible tokens) on the E
 
 ## Technology Used
 
-NFT World is a full-stack application, with this repository containing the frontend development (see https://github.com/kawaharm/nft-world-backend for backend development). The frontend is built using React, Node, and Axios. The React framework generates the primary user interface. Node and Axios are used to communicate with the backend server to login/signup users, request API calls and retrieve NFT-related documents from the database (MongoDB). The OpenSea API is used to extract real-time data on NFT collections and assets. 
+NFT World is a full-stack application, with this repository containing the frontend development (see https://github.com/kawaharm/nft-world-backend for backend development). The frontend is built using React, Node, and Axios. The React framework generates the primary user interface. Node and Axios are used to communicate with the backend server to login/signup users, request API calls and retrieve NFT-related documents from the database (MongoDB). The OpenSea API is used to extract real-time data on NFT collections and digital assets. 
 
 ## How To Install
 
@@ -27,7 +27,7 @@ Rankings Page
 
 ## Code Snippets
 
-`RankingContainer.js`
+### `RankingContainer.js`
 
 This React method sends an HTTP request to the server to retrieve all the `Collections` documents and store it in the `collections` state array.
 ```js
@@ -46,7 +46,7 @@ This React method sends an HTTP request to the server to retrieve all the `Colle
     }
 ```
 
-To display the attributes of each collection on the Rankings page, a copy of the `collections` array is created, mapped to extract the necessary data, and sent to the OpenSeaRanking component.
+To display the attributes of each collection on the Rankings page, a copy of the `collections` array is created called `displayCollections`, mapped to extract the necessary data, and sent to the `OpenSeaRanking` component.
 ```js
         // Create a new array that stores collections data and send to OpenSeaRanking Component 
         const displayCollections = this.state.collections.map((c, idx) => <OpenSeaRanking
@@ -63,8 +63,9 @@ To display the attributes of each collection on the Rankings page, a copy of the
         />);
 ```
 
-`NftPage.js`
+### `NftPage.js`
 
+To display the assets of an NFT collection, an API call is made in the `useEffect()` hook to retrieve each asset's metadata. Our call limits the number of assets to 20 and sorts them by the most recent sales. Once retrieved, the data is stored in an `assets` state array, copied onto a new array `displayAssets`, and sent to the `NftAsset` component.
 ```js
     const { id } = useParams();
     const [assets, setAssets] = useState([]);
