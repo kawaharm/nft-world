@@ -19,23 +19,8 @@ class Homepage extends Component {
         e.preventDefault(); // at the beginning of a submit function
         const searchData = {
             search: this.state.search
+            // INSERT CODE HERE
         };
-        // axios.post(`${REACT_APP_SERVER_URL}/users/login`, searchData)
-        //     .then(response => {
-        //         const { token } = response.data;
-        //         // save token to localStorage
-        //         localStorage.setItem('jwtToken', token);
-        //         // set token to headers
-        //         setAuthToken(token);
-        //         // decode token to get the user data
-        //         const decoded = jwt_decode(token);
-        //         // set the current user
-        //         this.props.nowCurrentUser(decoded); // funnction passed down as props.
-        //     })
-        //     .catch(error => {
-        //         console.log('===> Error on login', error);
-        //         alert('Either email or password is incorrect. Please try again');
-        //     });
     };
     render() {
         return (
