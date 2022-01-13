@@ -2,8 +2,6 @@
 import React, { Component } from 'react';
 import './css/MarketContainer.css';
 
-// Components
-
 class MarketContainer extends Component {
     render() {
         return (

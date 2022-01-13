@@ -46,8 +46,6 @@ class NftAsset extends Component {
                             </div>
                         </div>
                     </div>
-
-
                     <div className="content">
                         <p>
                             <strong>32 Likes</strong>

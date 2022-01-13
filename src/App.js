@@ -10,15 +10,12 @@ import './App.css';
 // Components
 import Signup from './components/Signup';
 import Login from './components/Login';
+import Profile from './components/Profile';
 import Navbar from './components/Navbar/Navbar';
 import Homepage from './components/Homepage';
-import NftContainer from './components/NftContainer';
 import NftPage from './components/NftPage';
 import RankingContainer from './components/rankings/RankingContainer';
 import MarketContainer from './components/MarketContainer';
-import Profile from './components/Profile';
-
-
 
 // Protected route for user when logged in  
 const PrivateRoute = ({ component: Component, ...rest }) => {

@@ -45,12 +45,10 @@ function NftPage(props) {
         <div>
             <h1 className="collectionName">{collection.name}</h1>
             <p className="collectionDesc">{collection.description}</p>
-            {/* <h3 className="body-columns">{assets[0].asset_contract.description}</h3> */}
             <div class="columns body-columns">
                 <div class="column is-half is-offset-one-quarter" style={{ backgroundColor: "#292D38" }}>
                     {/* Add NftAsset Component Here */}
                     {displayAssets}
-
                     <footer class="footer">
                         <div class="container is-fluid">
                             <div class="content has-text-centered">
