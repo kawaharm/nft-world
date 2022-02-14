@@ -1,6 +1,16 @@
+.title-box {
+    display: block;
+    margin: 10px ;
+    border: 1px solid black;
+}
+
 .title {
     margin: 40px auto 100px auto; 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lora', serif;    
     font-size: 70px;
 }
 
+.subtitle {
+    font-family: 'Shizuru', cursive;
+    font-size: 70px;
+}

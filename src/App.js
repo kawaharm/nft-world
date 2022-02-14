@@ -72,7 +72,7 @@ function App() {
             element={<Login nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser} />}
           />
           <Route exact path="/" element={<Homepage />} />
-          <Route path="/nft" element={<NftContainer />} />
+          {/* <Route path="/nft" element={<NftContainer />} /> */}
           <Route path="/nft/:id" element={<NftPage />} />
           <Route path="/rankings" element={<RankingContainer />} />
           <Route path="/markets" element={<MarketContainer />} />

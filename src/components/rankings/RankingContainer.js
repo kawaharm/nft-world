@@ -19,7 +19,7 @@ class RankingContainer extends Component {
 
     // Access Collections Controller to retrieve NFT collections
     componentDidMount() {
-        axios.get(`${REACT_APP_SERVER_URL}/collections`)
+        axios.post(`${REACT_APP_SERVER_URL}/collections/assets`)
             .then((response) => {
                 // Store NFT collections from database
                 this.setState({

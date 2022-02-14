@@ -25,7 +25,10 @@ class Homepage extends Component {
     render() {
         return (
             <div className="homepage">
-                <h1 className="title">Welcome to NFT World!</h1>
+                <div className="title-box">
+                    <h1 className="title">Welcome to </h1>
+                    <span className="subtitle">NFT World!</span>
+                </div>
                 <section class="hero is-medium">
                     <div class="hero-body has-text-centered">
                         <h1 class="title is-2">Search for NFT Collection on OpenSea</h1>
