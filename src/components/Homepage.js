@@ -1,13 +1,48 @@
 import React, { Component } from "react";
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+
+
 import "./css/Homepage.css"
+
+const slides = [
+    {
+        image: "https://www.nftculture.com/wp-content/uploads/2021/01/opensea-banner-1170x389-1.png"
+    },
+    {
+        image: "https://miro.medium.com/max/1400/1*pOhV0stQq5lmuWk9Azl_mw.jpeg"
+    },
+
+]
 
 class Homepage extends Component {
     constructor(props) {
         super(props);
         this.state = {
             search: "",
+            currentSlide: 0,
+            slideLength: slides.length
         }
     }
+
+    nextSlide = () => {
+        if (this.state.currentSlide === this.state.slideLength - 1) {
+            this.setState({ currentSlide: 0 })
+        }
+        else {
+            this.setState({ currentSlide: this.state.currentSlide + 1 })
+        }
+    }
+
+    prevSlide = () => {
+        if (this.state.currentSlide === 0) {
+            this.setState({ currentSlide: this.state.slideLength - 1 })
+        }
+        else {
+            this.setState({ currentSlide: this.state.currentSlide - 1 })
+        }
+    }
+
+
 
     handleSearch(e) {
         this.setState({
@@ -25,31 +60,45 @@ class Homepage extends Component {
     render() {
         return (
             <div className="homepage">
-                <div className="title-box">
-                    <h1 className="title">Welcome to </h1>
-                    <span className="subtitle">NFT World!</span>
-                </div>
-                <section class="hero is-medium">
-                    <div class="hero-body has-text-centered">
-                        <h1 class="title is-2">Search for NFT Collection on OpenSea</h1>
-                        <div id="hero-input-group" class="field has-addons has-addons-centered">
-                            <div class="control">
-                                <form onSubmit={this.handleSubmit.bind(this)}>
-                                    <input
-                                        class="input is-medium"
-                                        type="text"
-                                        placeholder="Search..."
-                                        value={this.state.search}
-                                        onChange={this.handleSearch.bind(this)}
-                                    />
-                                    <a class="button is-medium is-primary">
-                                        <i class="fal fa-search"></i>
-                                    </a>
-                                </form>
-                            </div>
-                        </div>
+                <div className="home-container">
+                    <div className="title-box">
+                        <div className="maintitle">Welcome to </div>
+                        <div className="subtitle">NFT World!</div>
                     </div>
-                </section>
+                    <section className="form-container">
+                        <h1 className="form-title">Search for NFT Collections</h1>
+                        <div id="hero-input-group" class="field has-addons has-addons-centered">
+                            <form onSubmit={this.handleSubmit.bind(this)}>
+                                <input
+                                    className="input searchbar"
+                                    type="text"
+                                    placeholder="Search..."
+                                    value={this.state.search}
+                                    onChange={this.handleSearch.bind(this)}
+                                />
+                                <a class="button is-medium is-primary">
+                                    <i class="fal fa-search"></i>
+                                </a>
+                            </form>
+                        </div>
+                    </section>
+                    <section className="carousel">
+                        <FaArrowAltCircleLeft className='left-arrow' onClick={this.prevSlide} />
+                        <FaArrowAltCircleRight className='right-arrow' onClick={this.nextSlide} />
+                        {slides.map((slide, index) => {
+                            return (
+                                <div
+                                    className={index === this.state.currentSlide ? "slide active" : "slide"}
+                                    key={index}
+                                >
+                                    {index === this.state.currentSlide && (
+                                        <img src={slide.image} className="banner" />
+                                    )}
+                                </div>
+                            )
+                        })}
+                    </section>
+                </div>
             </div>
         )
     }

@@ -5,9 +5,9 @@
 
 :root {
   --brandColor: hsl(166, 67%, 51%);
-  --background: rgb(247, 247, 247);
-  --textDark: hsla(0, 0%, 0%, 0.66);
-  --textLight: hsla(0, 0%, 0%, 0.33);
+  /* --background: rgb(247, 247, 247); */
+  /* --textDark: hsla(0, 0%, 0%, 0.66); */
+  /* --textLight: hsla(0, 0%, 0%, 0.33); */
 }
 
 .field:not(:last-child) {
@@ -42,7 +42,7 @@
 }
 
 .left p {
-  color: var(--textLight);
+  /* color: var(--textLight); */
   font-size: 1.15rem;
 }
 
@@ -54,12 +54,12 @@
 .right .description {
   margin-top: 1rem;
   margin-bottom: 1rem !important;
-  color: var(--textLight);
+  /* color: var(--textLight); */
   font-size: 1.15rem;
 }
 
 .right small {
-  color: var(--textLight);
+  /* color: var(--textLight); */
 }
 
 input {
@@ -73,6 +73,6 @@ input:focus {
 
 .fab,
 .fas {
-  color: var(--textLight);
+  /* color: var(--textLight); */
   margin-right: 1rem;
 }

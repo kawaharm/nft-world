@@ -1,16 +1,99 @@
-.title-box {
-    display: block;
-    margin: 10px ;
-    border: 1px solid black;
+.home-container {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    grid-template-rows: 1fr 1fr;
 }
 
-.title {
-    margin: 40px auto 100px auto; 
+.title-box {
+    /* display: grid; */
+    /* margin: 40px 40px 0 40px; */
+    /* padding-top: 100px; */
+    margin-top: 100px;
+}
+
+.maintitle {
     font-family: 'Lora', serif;    
     font-size: 70px;
+    color: #F5F1ED;
+    border: 1px solid white;
 }
 
 .subtitle {
     font-family: 'Shizuru', cursive;
     font-size: 70px;
+    color: #F5F1ED;
 }
+
+.nav-logo {
+    margin-right: 50px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-title {
+    font-family: 'Lora', serif;    
+    font-size: 30px;
+    color: #F5F1ED;
+    margin-bottom: 20px;
+}
+
+.searchbar {
+    width: 300px;
+    padding: 10px 10px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+.carousel {
+    grid-row: 2/2;
+    grid-column:1/ span 2;
+    position: relative;
+    height: 100%;
+    justify-self: center;
+    margin: 60px;
+  }
+  
+  .banner {
+    width: 1000px;
+    height: 300px;
+    border-radius: 10px;
+  }
+  
+  .right-arrow {
+    position: absolute;
+    top: 30%;
+    right: 32px;
+    font-size: 3rem;
+    color: #140F2D;
+    z-index: 1;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .left-arrow {
+    position: absolute;
+    top: 30%;
+    left: 32px;
+    font-size: 3rem;
+    color: #140F2D;
+    z-index: 1;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+  }

@@ -13,8 +13,8 @@ const Navbar = (props) => {
         <>
             <Nav>
                 <Bars />
-
                 <NavMenu>
+                    <h1 className="nav-logo">NFT World</h1>
                     <NavLink to='/' activeStyle>
                         Home
                     </NavLink>
@@ -30,22 +30,23 @@ const Navbar = (props) => {
                 </NavMenu>
                 {
                     props.isAuth
-                        ? <div>
-                            <NavBtn>
-                                <NavBtnLink to="/profile">Profile</NavBtnLink>
-                            </NavBtn>
-                            <NavBtn>
+                        ? <NavMenu>
+                            <NavLink to="/profile">
+                                Profile
+                            </NavLink>
+                            <NavLink>
                                 <span onClick={props.handleLogout}>Logout</span>
-                            </NavBtn>
-                        </div>
-                        : <div>
-                            <NavBtn>
-                                <NavBtnLink to="/signup">Create Account</NavBtnLink>
-                            </NavBtn>
-                            <NavBtn>
-                                <NavBtnLink to='/login'>Log In</NavBtnLink>
-                            </NavBtn>
-                        </div>
+                            </NavLink>
+                        </NavMenu>
+                        :
+                        <NavMenu>
+                            <NavLink to="/signup">
+                                Sign Up
+                            </NavLink>
+                            <NavLink to="/login">
+                                Login
+                            </NavLink>
+                        </NavMenu>
                 }
             </Nav>
         </>
