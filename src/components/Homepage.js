@@ -81,6 +81,23 @@ class Homepage extends Component {
                                 </a>
                             </form>
                         </div>
+                        <div className="bar">
+                            <img
+                                src="https://static.wixstatic.com/media/95db9b_c05be7ec3cac4b8f9cbce2750b42a3de~mv2.png/v1/fill/w_600,h_600,al_c/95db9b_c05be7ec3cac4b8f9cbce2750b42a3de~mv2.png"
+                                className="bar-image" />
+                            <img
+                                src="https://www.larvalabs.com/cryptopunks/cryptopunk9476.png"
+                                className="bar-image" />
+                            <img
+                                src="https://preview.redd.it/mzljqw49c8e71.jpg?width=640&crop=smart&auto=webp&s=8d7824686e763688e6db390f4a456acd772ffff8"
+                                className="bar-image" />
+                            <img
+                                src="https://pbs.twimg.com/media/FJtmikNWUAQlqCJ?format=jpg&name=large"
+                                className="bar-image" />
+                            <img
+                                src="https://www.artfixdaily.com//images/sd/d7/51/mura.jpg"
+                                className="bar-image" />
+                        </div>
                     </section>
                     <section className="carousel">
                         <FaArrowAltCircleLeft className='left-arrow' onClick={this.prevSlide} />

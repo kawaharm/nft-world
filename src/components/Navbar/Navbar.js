@@ -13,6 +13,7 @@ const Navbar = (props) => {
         <>
             <Nav>
                 <Bars />
+
                 <NavMenu>
                     <h1 className="nav-logo">NFT World</h1>
                     <NavLink to='/' activeStyle>

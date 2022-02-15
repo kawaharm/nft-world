@@ -5,22 +5,18 @@
 }
 
 .title-box {
-    /* display: grid; */
-    /* margin: 40px 40px 0 40px; */
-    /* padding-top: 100px; */
     margin-top: 100px;
 }
 
 .maintitle {
     font-family: 'Lora', serif;    
-    font-size: 70px;
+    font-size: 90px;
     color: #F5F1ED;
-    border: 1px solid white;
 }
 
 .subtitle {
     font-family: 'Shizuru', cursive;
-    font-size: 70px;
+    font-size: 90px;
     color: #F5F1ED;
 }
 
@@ -38,16 +34,26 @@
 
 .form-title {
     font-family: 'Lora', serif;    
-    font-size: 30px;
+    font-size: 40px;
     color: #F5F1ED;
     margin-bottom: 20px;
 }
 
 .searchbar {
-    width: 300px;
+    width: 400px;
     padding: 10px 10px;
     height: 45px;
     margin-right: 10px;
+}
+
+.bar {
+    display: flex;
+}
+
+.bar-image {
+    width: 70px;
+    height: auto;
+    border: 1px solid #140F2D;
 }
 
 .carousel {
