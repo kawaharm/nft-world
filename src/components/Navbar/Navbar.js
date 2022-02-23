@@ -15,22 +15,23 @@ const Navbar = (props) => {
                 <Bars />
                 <NavMenu>
                     <h1 className="nav-logo">NFT World</h1>
-                    <NavLink to='/' activeStyle>
+                    <NavLink to='/' >
                         Home
                     </NavLink>
-                    <NavLink to='/markets' activeStyle>
+                    <NavLink to='/markets' >
                         Markets
                     </NavLink>
-                    <NavLink to='/rankings' activeStyle>
+                    <NavLink to='/rankings' >
                         Rankings
                     </NavLink>
-                    <NavLink to='/team' activeStyle>
+                    <NavLink to='/team' >
                         About
                     </NavLink>
                 </NavMenu>
                 {
                     props.isAuth
-                        ? <NavMenu>
+                        ?
+                        <NavMenu>
                             <NavLink to="/profile">
                                 Profile
                             </NavLink>
